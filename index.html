@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta cgaret="utf-8">
+    <style>
+      body{
+        background-image:url("https://media.istockphoto.com/vectors/conceptual-background-pentagon-pattern-for-design-web-backdrop-color-vector-id960078644");   /*插入背景圖片*/
+	      background-size:100%;  /*設定背景比例大小*/
+      }
+      h1{
+        color:	#66B3FF; /*設定字體顏色*/
+        font-weight:bold;  /*粗體*/
+      }
+      img{
+	      weight:200px; /*圖片寬度*/
+	      height:200px; /*圖片高度*/
+      }
+      li{
+        font-size:50px; /*設定字體大小*/
+	      color:#2828FF;  /*設定字體顏色*/
+      }
+      button:hover{
+	      color:	#FF8EFF; /*滑鼠改變字的顏色*/
+      }
+      span{
+	      color:#FF8EFF;/*設定字體顏色*/
+	      font-size:100px; /*設定字體大小*/
+      }
+      #name{
+	      color:#2828FF;  /*設定字體顏色*/
+        font-size:60px; /*設定字的大小*/
+      }
+      p{
+	      color:#FF8EFF;
+	      font-size:40px; /*設定字的大小*/
+      }
+    </style>
+    <meta charset="utf-8">
     <title>個人履歷</title>
   </head>
+
   <body>
-    <div class="left">
-      <h1>陳昱安</h1>
-      <h4>正忙著網頁程式期末考的大學生</h4>
     <div>
-    <div class="right">
+    	<div>
+      	<span id="name">陳昱安</span>
+      	<h1><i>正忙著網頁程式期末考的大學生</i></h1>
+    	</div>
+    </div>
+    <hr>
+    <div>
       <ul>
         <li>學校：中央大學<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/NCULogo.svg/1200px-NCULogo.svg.png"></li>
         <li>系所：資管系</li>
         <li>台中人</li>
       </ul>
+      <p>測試您的BMI<p>
+      <input id="kg" type="text" placeholder="輸入公斤(kg)">
+      <input id="height" type="text" placeholder="輸入身高(m)">
+      <button onclick="func()">開始測驗</button>
+      <br><span id="result"></span>
     </div>
-  </bodt>
+
+    <script>
+	function func(){
+		var kg=document.getElementById("kg").value;
+		var height=document.getElementById("height").value;
+		document.getElementById("result").innerHTML=kg/(height*height);
+	}
+    </script>
+
+  </body>
 </html>
